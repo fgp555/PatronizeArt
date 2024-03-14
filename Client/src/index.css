@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+.active{
+  padding: 10px;
+  border-radius: 10px;
+}
+.chart{
+  height: 600px;
+}
+/* Media query para pantallas más grandes */
+@media screen and (min-width: 768px) {
+  .ventas {
+    max-width: 700px;
+  }
+}
+
+.tablesell{
+  height: 530px;
+  
+}
+.boton{
+  position: absolute;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+
+/* This style will apply to screens smaller than or equal to 600px wide */
+@media only screen and (max-width: 600px) {
+  body {
+    width: min-content;
+    font-size: 14px;
+  }
+}
+
+/* This style will apply to screens between 601px and 900px wide */
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* This style will apply to screens larger than 900px wide */
+@media only screen and (min-width: 901px) {
+  body {
+    font-size: 18px;
+  }
+}
